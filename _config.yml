@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "5Asterisks's Dev Note"
+title                    : "5Asterisks blog"
 title_separator          : "-"
 subtitle                 : " " # site tagline that appears below site title in masthead
 name                     : "5Asterisks"
-description              : "5Asterisks's Dev Note"
+description              : "5Asterisks blog"
 url                      : "https://ohsungkim56.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "ohsungkim56/ohsungkim56.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "5Asterisks"
   avatar           : "https://github.com/ohsungkim56.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "For short term memory"
+  bio              : "whoami"
   location         : "South Korea"
   email            : "oshungkim56@naver.com"
   links:
