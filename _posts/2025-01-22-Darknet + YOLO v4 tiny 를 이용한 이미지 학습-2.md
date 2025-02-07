@@ -1,6 +1,5 @@
 ---
 title: "Darknet + YOLO v4 tiny 를 이용한 이미지 학습-2"
-excerpt: ""
 author: ohsungkim56
 
 categories:

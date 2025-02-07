@@ -1,12 +1,11 @@
 ---
 title: "[Oracle VM] ssh port 변경"
-excerpt: ""
 author: ohsungkim56
 
 categories:
   [Linux, VM]
 tags:
-  [Oracle, VM, xrdp, ubuntu]
+  [Oracle, VM, ssh, ubuntu]
 
 toc: true
 
