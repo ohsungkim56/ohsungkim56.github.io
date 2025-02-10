@@ -23,7 +23,7 @@ Python interpreter 환경에서 특정 코드를 실행해야 하는 경우가 �
 
 ### 2-1. sys.flags.interactive
 
-```Python
+```python
 import sys
 
 def is_interpreter():
