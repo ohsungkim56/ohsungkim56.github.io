@@ -29,25 +29,25 @@ import sys
 def is_interpreter():
     return bool(sys.flags.interactive)
 
-print("Is running in interpreter:", is_interpreter())
+print(is_interpreter())
+
+# Python IDLE : False  
+# Notebook : False
+# Python 파일 실행 (intelliJ) : False
 ```
-> Python IDLE : False  
-> 
-> Notebook : False
-> 
-> Python 파일 실행 (intelliJ) : False
+**=> interpreter구분 불가능 (사용 불가)**
 
 #### 2-2. `sys.ps1`
 
 ```python
 import sys
 print(sys.ps1)
+
+# Python IDLE : >>>
+# Notebook : In :
+# Python 파일 실행 (intelliJ) : AttributeError: module 'sys' has no attribute 'ps1'
 ```
-> Python IDLE : >>>   / 
->
-> Notebook : In :
->
-> Python 파일 실행 (intelliJ) : AttributeError: module 'sys' has no attribute 'ps1'
+**=> prompt 없는 interpreter는 구분 불가능 (케이스에 따라서 사용 가능)**
 
 #### 2-3. `hasattr(__main__, "__file__")`
 
@@ -57,10 +57,9 @@ def is_interpreter():
     return not hasattr(__main__, "__file__")
 
 print(is_interpreter())
-```
 
-> Python IDLE : True
-> 
-> Notebook : True
-> 
-> Python 파일 실행 (intelliJ) : False
+# Python IDLE : True
+# Notebook : True
+# Python 파일 실행 (intelliJ) : False
+```
+**=> interpreter 구분 가능 (사용 가능)**
