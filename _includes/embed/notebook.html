@@ -1,6 +1,24 @@
-<iframe
-  loading="lazy"
-  src="{{ include.src }}"
-  frameborder="0"
-  style="width: 100%; height: 100%; margin-bottom: 1rem; aspect-ratio: 4 / 3;"
-></iframe>
+{% if include.full_content %}
+  <script>
+    function __iframe_loaded(t) {
+          var iframeDocument = t.contentDocument || t.contentWindow.document;
+          t.style.height = iframeDocument.documentElement.scrollHeight + 'px';
+        }
+  </script>
+  <iframe
+    loading="lazy"
+    frameborder="0"
+    src="{{ include.src }}"
+    style="margin-bottom: 1rem;  width: 100%"
+    onload="__iframe_loaded(this)"></iframe>
+{% else %}
+  <iframe
+    loading="lazy"
+    frameborder="0"
+    src="{{ include.src }}"
+    style="margin-bottom: 1rem; 
+      width: {{ include.width | default : '100%'}}; 
+      height: {{ include.height | default : '100%' }}; 
+      aspect-ratio: {{ include.ratio | default : '4/3' }};"
+  ></iframe>
+{% endif %}
