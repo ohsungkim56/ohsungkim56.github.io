@@ -10,13 +10,11 @@ tags:
 toc: true
 
 date: 2025-03-02
-# last_modified_at: 2025-03-02
+last_modified_at: 2025-03-03
 ---
 
 Jekyll 블로그는 기본적으로 Markdown 형식의 파일을 사용하여 포스트를 작성하는데,
-Jupyter Notebook(.ipynb) 파일을 직접 Markdown 형식으로 사용할 수 없으므로 변환 과정이 필요했다. 
-
-관련 툴을 찾아본 결과, `nbconvert`라는 툴이 있었고, 이를 사용하여 Jupyter Notebook을 다른 형식으로 변환하였다.
+Jupyter Notebook(.ipynb) 파일을 직접 Markdown 형식으로 사용할 수 없으므로 변환 과정이 필요했다. 관련 툴을 찾아본 결과, `nbconvert`라는 툴이 있었고, 이를 사용하여 Jupyter Notebook을 다른 형식으로 변환하였다.
 
 `nbconvert`는 Notebook을 `HTML 파일`로 변환할 때, 그 안의 이미지 파일은 base64 인코딩되어 HTML 파일 내에 삽입해줘서, 이로 인해 **모든 Notebook내용이 하나의 파일로 출력**되어 HTML 단일 파일로 사용할 수 있었다.
 
@@ -32,12 +30,15 @@ jupyter nbconvert MyNotebook.ipynb --to html # 변환
 
 ### 2. 변환한 html 파일 업로드
 ```
-{blog directory}/assets/html/{날짜}/{post이름}/{HTML 파일}
+{blog directory}/assets/html/{날짜}/{post이름}/{변환한 HTML 파일}
 ```
+
+
 생성한 HTML 파일을 위 경로로 위치 시켰다. 경로 설정은 블로그마다 다를 수 있다. 
 
 ### 3. embed/notebook.html 생성 
-```html
+{% raw %}
+```liquid
 {% if include.full_content %}
   <script>
     function __iframe_loaded(t) {
@@ -50,7 +51,8 @@ jupyter nbconvert MyNotebook.ipynb --to html # 변환
     frameborder="0"
     src="{{ include.src }}"
     style="margin-bottom: 1rem;  width: 100%"
-    onload="__iframe_loaded(this)"></iframe>
+    onload="__iframe_loaded(this)">
+  </iframe>
 {% else %}
   <iframe
     loading="lazy"
@@ -59,24 +61,33 @@ jupyter nbconvert MyNotebook.ipynb --to html # 변환
     style="margin-bottom: 1rem; 
       width: {{ include.width | default : '100%'}}; 
       height: {{ include.height | default : '100%' }}; 
-      aspect-ratio: {{ include.ratio | default : '4/3' }};"
-  ></iframe>
+      aspect-ratio: {{ include.ratio | default : '4/3' }};">
+  </iframe>
 {% endif %}
 ```
+{% endraw %}
+
 삽입하기 위한 template(?)을 생성하였다.
 
 ### 4. markdown에 html 파일 삽입
-```liquid
-{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{HTML 파일}" %}
-```
-
+{% raw %}
 ```liquid
 # default size 설정 width="100%" height="100%" aspect-ratio="4/3"
-{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{HTML 파일}" width="100%" height="100%" aspect-ratio="4/3" %} 
+{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{변환한 HTML 파일}" %}
+``` 
+{% endraw %} {: .nolineno }
 
-```
+### 5. markdown에 html 파일 삽입, 삽입 사이즈 변경
+{% raw %}
+```liquid
+# size 변경
+{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{변환한 HTML 파일}" aspect-ration="16/9"%}
+``` 
+{% endraw %} {: .nolineno }
 
-### 5. 스크롤 없이 html 파일 전체 내용 삽입
-```markdown
-{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{HTML 파일}" full_content="true" %}
+### 6. 스크롤 없이 html 파일 전체 내용 삽입
+{% raw %}
+```liquid
+{% include embed/notebook.html src="/assets/html/{날짜}/{post이름}/{변환한 HTML 파일}" full_content="true" %}
 ```
+{% endraw %} {: .nolineno }
