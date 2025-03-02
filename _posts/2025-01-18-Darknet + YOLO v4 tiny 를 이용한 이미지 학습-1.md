@@ -28,7 +28,7 @@ last_modified_at: 2025-01-29
 1. 게임 내 스크린샷 기능으로 게임 이미지(`Base image`) 생성
 2. 게임 이미지(`Base image`)에 게임 아이템 이미지(`Game asset`)을 추가하여 이미지 생성(`Generated image`)
 
-![](/img/2025-01-18/baseImage_gameasset.png)
+![](/assets/img/2025-01-18/baseImage_gameasset.png)
 
 **_Base images (16장)_**
 
@@ -56,11 +56,11 @@ yolov4-tiny-custom.cfg 파일에서 channel수 4로 바꿔줘야 하는 듯?
 
 - 5(반복) * 14 `Base image` = 80 `Generated image` + 80 `YOLO format Coodinates`
 
-![](/img/2025-01-18/generatedImage_YOLO_label.png)
+![](/assets/img/2025-01-18/generatedImage_YOLO_label.png)
 
 위 내용을 5회 반복하여 80장의 이미지를 생성하여 학습에 사용하였다.
 
-![](/img/2025-01-18/makesese_ai_check_labeling.png)
+![](/assets/img/2025-01-18/makesese_ai_check_labeling.png)
 
 [makesense.ai](https://www.makesense.ai/)에 `Generated image`와 `YOLO format Coodinates` 업로드하면 lebeling 된 내용을 확인 할 수 있다.
 
@@ -160,7 +160,7 @@ If you want to train from the beginning, then use flag in the end of training co
 
 ### batch 별 mAP 변화
 
-![](/img/2025-01-18/traing_chart.png)
+![](/assets/img/2025-01-18/traing_chart.png)
 
 ## 5. reference
 

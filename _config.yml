@@ -95,7 +95,7 @@ theme_mode: dark # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://ohsungkim56.github.io/assets"
+cdn: "https://ohsungkim56.github.io/"
 # cdn: "http://localhost:4000/assets"
 
 # the avatar on sidebar, support local or CORS resources
