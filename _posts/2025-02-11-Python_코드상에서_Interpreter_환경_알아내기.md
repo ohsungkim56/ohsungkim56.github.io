@@ -10,7 +10,7 @@ tags:
 toc: true
 
 date: 2025-02-11
-# last_modified_at: 2025-01-18
+last_modified_at: 2025-04-20
 ---
 
 ## 1. 필요한 이유
@@ -35,7 +35,7 @@ print(is_interpreter())
 # Notebook : False
 # Python 파일 실행 (intelliJ) : False
 ```
-**=> interpreter구분 불가능 (사용 불가)**
+**이 경우에는 interpreter 환경 구분 불가했다.**
 
 #### 2-2. `sys.ps1`
 
@@ -47,7 +47,7 @@ print(sys.ps1)
 # Notebook : In :
 # Python 파일 실행 (intelliJ) : AttributeError: module 'sys' has no attribute 'ps1'
 ```
-**=> prompt 없는 interpreter는 구분 불가능 (케이스에 따라서 사용 가능)**
+**prompt가 없는 interpreter는 구분 불가했고, 예외 처리가 필요한점이 마음에 안들었다..**
 
 #### 2-3. `hasattr(__main__, "__file__")`
 
@@ -62,4 +62,4 @@ print(is_interpreter())
 # Notebook : True
 # Python 파일 실행 (intelliJ) : False
 ```
-**=> interpreter 구분 가능 (사용 가능)**
+**최종적으로 위 방법으로 interpreter 환경을 구분할 수 있었다.**
