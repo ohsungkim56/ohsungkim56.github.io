@@ -19,7 +19,7 @@ Windows환경에서 이미지 처리에 사용하기 위해서 특정 프로그�
 ### 1. Windows API를 사용하여 캡쳐
 
 ChatGPT에 물어보면 다음과 같은 방법을 알려준다.
-``` Python
+``` python
 wDC = win32gui.GetWindowDC(self.hwnd)
 dcObj = win32ui.CreateDCFromHandle(wDC)
 cDC = dcObj.CreateCompatibleDC()
