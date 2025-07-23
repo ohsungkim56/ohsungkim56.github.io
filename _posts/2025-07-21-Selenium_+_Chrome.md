@@ -10,7 +10,7 @@ tags:
 toc: true
 
 date: 2025-07-21
-# last_modified_at: 2025-01-18
+last_modified_at: 2025-07-23
 ---
 
 ## 1. Selenium Manager로 driver 자동 관리
@@ -34,14 +34,31 @@ driver.get("https://naver.com")
 google-chrome-stable --disable-features=DisableLoadExtensionCommandLineSwitch --load-extension=MyExt.crx
 ```
 
-## 3. --remote-debug-address 옵션
-Chromium에서 `--remote-debug-address` 옵션이 삭제되었다.[^4]
+## 3. `--remote-debug-address` 옵션
+Chromium에서 `--remote-debuggin-address` 옵션이 삭제되었다.[^4]
 
 언제 삭제된건지는 정확히 알 수 없지만, 23년도 (110 버전) 무렵에 삭제된 것으로 보인다.
 
-함께 사용하던 `--remote-debug-port` 옵션은 아직 유효하다.
+chrome 135.0.7049.84 버전 기준, `--remote-debuggin-address` 옵션를 넣고 chrome을 실행시키면 무시된다.
+
+![img](/assets/img/2025-07-21/chrome_remote_debugging_address_option.png)
+
+함께 사용하던 `--remote-debugging-port` 옵션은 아직 유효하다.
 
 즉, **localhost에서 devtools에 접속하는건 가능**하고, 외부 호스트에서 접속하는 것만 막혔다.
+
+위와 같이 chrome을 실행 시키고, 같은 host에서 아래와 같이 python 코드를 실행 하면 접속이 가능하다.
+```bash
+google-chrome-stable --headless --disable-dev-shm-usage --no-sandbox --remote-debugging-port=9999 1>/dev/null 2>&1 &
+```
+
+```python
+from selenium import webdriver
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option('debuggerAddress', '127.0.0.1:9999')
+driver = webdriver.Chrome(options=options)
+```
 
 ## 4. Old version chrome, 
 Google에서는 공식적으로 chrome 구버전을 제공하지 않는다.
@@ -79,6 +96,7 @@ WSL2 ubuntu 환경(내부적으로 docker에 올라가는듯)도 마찬가지로
 
 내 경우는, systemd로 변경 및 snap 설치하였으나, chromium 설치시 에러가 발생하여 진행 할 수 없었다.
 
+---
 
 [^1]: https://www.selenium.dev/documentation/selenium_manager
 
