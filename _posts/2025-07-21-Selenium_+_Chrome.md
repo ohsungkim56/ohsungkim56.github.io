@@ -98,16 +98,16 @@ WSL2 ubuntu 환경(내부적으로 docker에 올라가는듯)도 마찬가지로
 
 ---
 
-[^1]: https://www.selenium.dev/documentation/selenium_manager
+[^1]: [https://www.selenium.dev/documentation/selenium_manager](https://www.selenium.dev/documentation/selenium_manager)
 
-[^2]: https://winaero.com/google-releases-chrome-137-with-new-features-and-security-enhancements/#Removal_of_--load-extension_CLI_Flag
+[^2]: [https://winaero.com/google-releases-chrome-137-with-new-features-and-security-enhancements/#Removal_of_--load-extension_CLI_Flag](https://winaero.com/google-releases-chrome-137-with-new-features-and-security-enhancements/#Removal_of_--load-extension_CLI_Flag)
 
-[^3]: https://stackoverflow.com/questions/79657438/how-to-load-extensions-programmatically-in-chrome-version-137/79660303#79660303
+[^3]: [https://stackoverflow.com/questions/79657438/how-to-load-extensions-programmatically-in-chrome-version-137/79660303#79660303](https://stackoverflow.com/questions/79657438/how-to-load-extensions-programmatically-in-chrome-version-137/79660303#79660303)
 
-[^4]: https://issues.chromium.org/issues/40242234
+[^4]: [https://issues.chromium.org/issues/40242234](https://issues.chromium.org/issues/40242234)
 
-[^5]: https://snapcraft.io/blog/chromium-in-ubuntu-deb-to-snap-transition
+[^5]: [https://snapcraft.io/blog/chromium-in-ubuntu-deb-to-snap-transition](https://snapcraft.io/blog/chromium-in-ubuntu-deb-to-snap-transition)
 
-[^6]: https://askubuntu.com/questions/1204571/how-to-install-chromium-without-snap
+[^6]: [https://askubuntu.com/questions/1204571/how-to-install-chromium-without-snap](https://askubuntu.com/questions/1204571/how-to-install-chromium-without-snap)
 
-[^7]: https://learn.microsoft.com/en-us/windows/wsl/systemd
+[^7]: [https://learn.microsoft.com/en-us/windows/wsl/systemd](https://learn.microsoft.com/en-us/windows/wsl/systemd)
