@@ -37,15 +37,16 @@ A,B 둘 다 138 버전에서 잘 동작했고, B는 135 버전에서 동작하�
 가능하면 A를 사용하도록 하자.
 
 ## 3. 참고
-* CDP에 관한 설명 Selenium의 CDP 소개페이지
-[https://www.selenium.dev/documentation/webdriver/bidi/cdp](https://www.selenium.dev/documentation/webdriver/bidi/cdp)
+- CDP에 관한 설명 Selenium의 CDP 소개페이지
+
+> [https://www.selenium.dev/documentation/webdriver/bidi/cdp](https://www.selenium.dev/documentation/webdriver/bidi/cdp)
 
 
-* 다른 CDP cmd 를 확인할수 있는 사이트
-[https://chromedevtools.github.io/devtools-protocol](https://chromedevtools.github.io/devtools-protocol)
+- 다른 CDP cmd 를 확인할수 있는 사이트
+
+> [https://chromedevtools.github.io/devtools-protocol](https://chromedevtools.github.io/devtools-protocol)
 
 ---
 
-[^1]: [https://stackoverflow.com/questions/35403614/clear-browser-cookies-with-selenium-webdriver-java-bindings#answer-60487685
-](https://stackoverflow.com/questions/35403614/clear-browser-cookies-with-selenium-webdriver-java-bindings#answer-60487685)
+[^1]: [https://stackoverflow.com/questions/35403614/clear-browser-cookies-with-selenium-webdriver-java-bindings#answer-60487685](https://stackoverflow.com/questions/35403614/clear-browser-cookies-with-selenium-webdriver-java-bindings#answer-60487685)
 [^2]: [https://chromedevtools.github.io/devtools-protocol/tot/Network/#method-clearBrowserCookies](https://chromedevtools.github.io/devtools-protocol/tot/Network/#method-clearBrowserCookies)
