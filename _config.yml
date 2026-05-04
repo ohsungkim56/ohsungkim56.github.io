@@ -23,7 +23,8 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://ohsungkim56.github.io"
+# url: "https://ohsungkim56.github.io"
+url: "https://blog.fivestars.dev"
 
 github:
   username: ohsungkim56 # change to your GitHub username
@@ -95,7 +96,8 @@ theme_mode: dark # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://ohsungkim56.github.io/"
+# cdn: "https://ohsungkim56.github.io/"
+cdn: "https://blog.fivestars.dev/"
 # cdn: "http://localhost:4000/assets"
 
 # the avatar on sidebar, support local or CORS resources
