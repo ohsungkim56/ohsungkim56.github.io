@@ -10,12 +10,13 @@ tags:
 toc: true
 
 date: 2025-01-31
-last_modified_at: 2025-01-31
+last_modified_at: 2026-05-05
 ---
 
 ## 0. 이전 포스트
-[Darknet + YOLO v4 tiny 를 이용한 이미지 학습-1](https://ohsungkim56.github.io/posts/Darknet-+-YOLO-v4-tiny-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%95%99%EC%8A%B5-1/)
-[Darknet + YOLO v4 tiny 를 이용한 이미지 학습-2](https://ohsungkim56.github.io/posts/Darknet-+-YOLO-v4-tiny-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%95%99%EC%8A%B5-2/)
+[Darknet + YOLO v4 tiny 를 이용한 이미지 학습-1](/posts/Darknet-+-YOLO-v4-tiny-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%95%99%EC%8A%B5-1/)
+
+[Darknet + YOLO v4 tiny 를 이용한 이미지 학습-2](/posts/Darknet-+-YOLO-v4-tiny-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%95%99%EC%8A%B5-2/)
 
 
 ## 1. 작업 내용
